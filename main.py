@@ -56,7 +56,7 @@ def SpeechToText(source):
 
 # Function to translate
 def translate(sentence):
-    global output_language
+    global input_language, output_language, translator
     result = translator.translate(sentence, src=input_language, dest=output_language)
     return [result.text, result.pronunciation]
 
